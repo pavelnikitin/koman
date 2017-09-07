@@ -1,0 +1,173 @@
+
+@import "mymixins.less";
+@import "myvariables.less";
+@import "myfonts.less";
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    &:hover {
+    text-decoration: none;
+    color: @color;
+    }    
+}  
+
+.row .wrap {
+    background-color: @colordark;
+}
+.topheader {
+    font-family: @fontcustom;
+    line-height: 28px;
+    height: 30px;
+    background-color: @colordark;
+}
+
+.topheader__support {
+    height: 30px;
+    font-size: 14px;
+    color: @colorlighter;
+    margin-left: 0px;
+}
+
+@media (max-width: 449px) {
+   .topheader__support {
+    font-size: 12px;
+} 
+}
+
+
+.rectangle1 {
+    height: 88px;
+    background-color:gray;
+    padding: 0;
+}
+
+.mynavbar {
+    height: 88px;
+    border: none;
+    border-radius: 0;   
+}
+
+.navbar-brand, .mybrand {
+    margin-right: 205px;
+    padding-left: 17px;
+    font-size: 48px;
+    line-height: 52px;
+    font-family: @fontlight;
+    color: @colordark !important ;
+} 
+
+@media (min-width: 450px) and  (max-width: 767px) {
+    .navbar-brand, .mybrand {
+        margin: 0 auto;
+        padding:10 1px;
+        font-size: 40px;
+       
+    } 
+}
+
+@media (max-width: 449px) {
+    .navbar-brand, .mybrand {
+        margin: 0 auto;
+        padding:10 1px;
+        font-size: 30px;
+        position:absolute;
+       
+    } 
+}
+
+    @media (min-width: 768px) and (max-width: 990px) {
+        .navbar-brand, .mybrand {
+            margin-right: 35px;
+            padding-left: 15px;
+            padding-right: 5px;
+            font-size: 30px;
+        }
+}
+
+.basket {
+    width: 40px;
+    height: 40px;
+    border:1px solid @color;
+    background-image: url(../img/basket.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    &:hover {
+        border:2px solid @colordark;
+    }
+}
+
+.bold {
+    font-size: 16px;
+    font-family: @fontbold ;
+}
+
+.light {
+    font-size: 12px;
+    font-family: @fontcustom;
+}
+
+ul>li>a {
+    color: @color !important;
+    background-color: #ffffff !important ;
+
+    &:hover, &:active, &:focus {
+        color: @colordark !important;
+        background-color: #ffffff !important;
+    }
+}
+
+ul>li {
+   padding: 10px 16px;
+}
+
+@media (min-width: 768px) and (max-width: 1400px) {
+   
+     .light {
+    font-size: 10px;
+    font-family: @fontcustom;
+}   
+    .bold {
+    font-size: 12px;
+    font-family: @fontbold ;
+}
+      
+    ul>li> {
+        padding: 10px 5px;
+     }
+     
+     .nav>li>a {
+        padding: 10px 5px;
+    } 
+}
+
+@media (min-width: 991px) and (max-width: 1400px) {
+    ul>li> {
+        padding: 10px 10px;
+     }
+
+     .nav>li>a {
+        padding: 10px 10px;
+    } 
+
+    .navbar-brand, .mybrand {
+        margin-right: 100px;
+        padding-left: 15px;
+        padding-right: 5px;
+        font-size: 30px;
+    }
+     
+}
+
+.slider {
+    height: 490px;
+    background-color: #25DD1A;
+}
+
+
+
+
+
+
+
+
