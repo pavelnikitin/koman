@@ -69,7 +69,7 @@ a {
 @media (max-width: 449px) {
     .navbar-brand, .mybrand {
         margin: 0 auto;
-        padding:10 1px;
+        padding: 10 1px;
         font-size: 30px;
         position:absolute;
        
@@ -159,22 +159,41 @@ ul>li {
      
 }
 
-.slider {
-    height: 490px;
-    background-color: #25DD1A;
-}
-
-.item{
-    background: #333;    
-    text-align: center;
+.carousel {
     height: 490px !important;
-}
-.carousel{
-    margin-top: 0px;
-}
+    overflow: hidden;
+  }
+  .carousel-inner {
+    overflow: visible;
+  }
+  .carousel-inner img {
+    left: 50%;
+    max-width: none !important;
+    min-height: 490px;
+    min-width: 100%;
+    position: absolute;
+    top: 200px;
+    transform: translate(-50%,-50%);
+  }
 
+  .mask {
+    background-color: rgba(0, 169, 161, 0.3);
+    min-height: 490px;
+    min-width: 2000px;
+    position: absolute;
+    top: 0px;
 
-
+  }
+ 
+  .slogan {
+    font-size: 28px;
+    font-family: "RobotoSlabLight";
+    color: #fbfbfb;
+    background-color: rgba(211, 228, 227, 0.4);
+    margin-left: 7vw;
+    position: relative;
+    top: 29vh;
+    }
 
 
 
