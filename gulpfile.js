@@ -5,17 +5,18 @@ var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var filter = require('gulp-filter');
+var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
+var plumber = require('gulp-plumber');
 
 // Compile LESS files from /less into /css
 gulp.task('less', function() {
     return gulp.src('less/styles.less')
+        .pipe(plumber())
         .pipe(sourcemaps.init())
-        .pipe( less().on( 'error', function( error )
-      {
-        console.log( error );
-      } )
-    )   .pipe(sourcemaps.write())
+        .pipe(autoprefixer())
+        .pipe( less())
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest('css'))
         .pipe(browserSync.reload({
             stream: true
@@ -25,12 +26,10 @@ gulp.task('less', function() {
 // Compile LESS files bootstrap from /less into /css
 gulp.task('less1', function() {
     return gulp.src('vendor/bootstrap/less/bootstrap.less')
+        .pipe(plumber())
         .pipe(sourcemaps.init())
-        .pipe( less().on( 'error', function( error )
-      {
-        console.log( error );
-      } )
-    )   .pipe(sourcemaps.write())
+        .pipe( less())   
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest('css'))
         .pipe(browserSync.reload({
             stream: true
@@ -63,6 +62,7 @@ gulp.task('minify-css1', ['less'], function() {
 // Minify JS
 gulp.task('minify-js', function() {
     return gulp.src('js/freelancer.js')
+        .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(uglify())
         .pipe(rename({ suffix: '.min' }))
