@@ -10,7 +10,7 @@ a {
     color: @color;
     }    
 }  
-
+ 
 
 .font_bold {
     font-size: 14px;
@@ -99,6 +99,7 @@ li.active > a {
     height: 490px !important;
     overflow: hidden;
   }
+
   .carousel-inner {
     overflow: visible;
   }
@@ -130,21 +131,54 @@ li.active > a {
     position: relative;
     top: 29vh;
     }
-
-  .servis  {
-        
-        text-align: center;
-    }
-
-    .payment, .delivery, .guarantee  {
-        margin: 30px auto;
-        height: 100px;
-    }
-
-    .str {
-        background-color: rgba(62, 13, 13, 0.4);
+   
+    .servis {
         height: 200px;
-        margin-top: 100px;
+        margin-top: 20px;
+        text-align:center;
+        p {
+        color: @colordark;
+        font-size: 18px;
+        text-transform:uppercase;
+        }
+    }
+  
+    .servis_payment, .servis_delivery, .servis_guarantee  {
+        margin: 30px auto;
+        height: 70px;  
+    }
+
+    .assortment {
+        height: 436px;
+        .assortment_sofas,.assortment_accessories,
+        .assortment_benches,.assortment_lightning {
+        height: 218px;
+        padding: 0;
+        border: 1px solid white;
+        background-image: url(../img/sofa.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        &:hover,&:active,&:focus {
+            .assortment_blockhover {
+                display: block;
+            }
+        }
+        
+        .assortment_blockhover {
+                background-color: rgba(25, 32, 32, 0.9);
+                height: 218px;
+                display: none;
+        }
+
+        }
+        
+
+        .assortment_customfurniture {
+            background-color: #130F0F;
+            height: 436px;
+        }
     }
 
     /*Адаптивность */
