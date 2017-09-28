@@ -3,6 +3,10 @@
 @import "myvariables.less";
 @import "myfonts.less";
 /* Общие стили*/
+body {
+    margin-bottom: 20%;
+}
+
 a {
     text-decoration: none;
     &:hover {
@@ -169,17 +173,63 @@ li.active > a {
         .assortment_blockhover {
                 background-color: rgba(25, 32, 32, 0.9);
                 height: 218px;
+                border: 2px solid @color;
+                padding-top: 50px;
+                font-family: @fontcustom !important;
+                h3,span {
+                    color: #fff;
+                }
+                
+
+                span {
+                  border: 2px solid #fff;
+                  padding: 4px;
+                  &:hover {
+                    border: 2px solid @colordark;
+                    color: @colordark;  
+                  }
+                }
                 display: none;
         }
 
         }
-        
-
-        .assortment_customfurniture {
-            background-color: #130F0F;
-            height: 436px;
-        }
     }
+    .assortment_customfurniture {
+        background-color: rgba(76, 145, 49, 0.9);
+        height: 436px;
+        padding: 0;
+        &:hover,&:active,&:focus {
+            .customfurniture_blockhover {
+                display: block;
+            } 
+        }
+
+        .customfurniture_blockhover {
+            display: none;
+            background-color: rgba(25, 32, 32, 0.9);
+            height: 436px;
+            border: 2px solid @color;
+            padding-top: 150px;
+            font-family: @fontcustom !important;
+
+            h3,span {
+                color: #fff;
+            }
+            
+        
+            span {
+              border: 2px solid #fff;
+              padding: 4px;
+              &:hover {
+                border: 2px solid @colordark;
+                color: @colordark;  
+              }
+            }
+                 
+            }
+         
+        }
+    
 
     /*Адаптивность */
 
