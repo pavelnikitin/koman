@@ -9,7 +9,7 @@ body {
 
 a {
     text-decoration: none;
-    &:hover {
+    &:hover, &:focus, &:active {
     text-decoration: none;
     color: @color;
     }    
@@ -135,6 +135,8 @@ li.active > a {
     position: relative;
     top: 29vh;
     }
+
+    /* "Сервис"*/
    
     .servis {
         height: 200px;
@@ -152,23 +154,28 @@ li.active > a {
         height: 70px;  
     }
 
+    /* Категории*/
+
     .assortment {
         height: 436px;
+
         .assortment_sofas,.assortment_accessories,
         .assortment_benches,.assortment_lightning {
         height: 218px;
         padding: 0;
-        border: 1px solid white;
-        background-image: url(../img/sofa.png);
+        border: 1px solid #fff;
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: bottom left;
         background-size: cover;
 
         &:hover,&:active,&:focus {
+
             .assortment_blockhover {
                 display: block;
             }
+
         }
+ 
         
         .assortment_blockhover {
                 background-color: rgba(25, 32, 32, 0.9);
@@ -176,6 +183,9 @@ li.active > a {
                 border: 2px solid @color;
                 padding-top: 50px;
                 font-family: @fontcustom !important;
+                display: none;
+
+
                 h3,span {
                     color: #fff;
                 }
@@ -184,28 +194,74 @@ li.active > a {
                 span {
                   border: 2px solid #fff;
                   padding: 4px;
+
                   &:hover {
                     border: 2px solid @colordark;
                     color: @colordark;  
                   }
+                  
                 }
-                display: none;
+
         }
 
         }
+
+    
+        .assortment_sofas {
+            background-image: url(../img/sofa.png);
+        }    
+    
+        .assortment_accessories {
+            background-image: url(../img/accessories.png);
+        }
+        
+        .assortment_benches {
+            background-image: url(../img/benches.png);
+        }
+        
+        .assortment_lightning {
+            background-image: url(../img/lightning.png);
+            background-position: top left;
+        }  
+
     }
     .assortment_customfurniture {
-        background-color: rgba(76, 145, 49, 0.9);
+        background-image: url(../img/customfurniture.png);
+        background-repeat: no-repeat;
+        background-position: center left;
+        background-size: cover; 
         height: 436px;
         padding: 0;
+
+
         &:hover,&:active,&:focus {
             .customfurniture_blockhover {
                 display: block;
             } 
+        
+        }
+
+        .customfurniture_slogan {
+            position: absolute;
+            bottom: 70px;
+            z-index: 1;
+            padding: 0px 20px;
+            color: #fff;
+            font-size: 35px;
+            font-family: @fontcustom !important;
+
+            span {
+                background-color: rgba(211, 228, 227, 0.4);
+            
+            }
+
+
         }
 
         .customfurniture_blockhover {
             display: none;
+            position: relative;
+            z-index: 2;
             background-color: rgba(25, 32, 32, 0.9);
             height: 436px;
             border: 2px solid @color;
@@ -229,7 +285,43 @@ li.active > a {
             }
          
         }
-    
+
+    /*"Адрес" */  
+
+    .address {
+
+        h3 {
+            color: @colordark;
+            margin-top: 30px;
+        }
+
+        h4 {
+            color: @color;
+            margin-top: 20px;
+        }
+
+        .address_support {
+            height: 350px;
+            background-color: #A55858;
+
+            
+        }
+
+        .address_adress {
+            height: 350px;
+            background-color: #54E736;
+        }
+      
+        .address_image {
+            height: 350px;
+            background-image: url(../img/footerimage.png);
+            background-repeat: no-repeat;
+            background-position: center;
+             background-size: cover;
+        }
+    }
+
+
 
     /*Адаптивность */
 
