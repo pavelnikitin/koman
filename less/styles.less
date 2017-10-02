@@ -3,9 +3,6 @@
 @import "myvariables.less";
 @import "myfonts.less";
 /* Общие стили*/
-body {
-    margin-bottom: 20%;
-}
 
 a {
     text-decoration: none;
@@ -291,7 +288,7 @@ li.active > a {
     .address {
 
         h3 {
-            color: @colordark;
+            color: @color;
             margin-top: 30px;
         }
 
@@ -300,16 +297,23 @@ li.active > a {
             margin-top: 20px;
         }
 
-        .address_support {
-            height: 350px;
-            background-color: #A55858;
+        .address_support,.address_adress {
+            height: 200px;
+            color: @color;
+            margin-top: 80px;
 
+            a {
+                color: @colordark;
+                &:hover,&:focus,&:active {
+                    color: @color;
+                }
+            }
             
         }
 
         .address_adress {
             height: 350px;
-            background-color: #54E736;
+            
         }
       
         .address_image {
@@ -319,6 +323,13 @@ li.active > a {
             background-position: center;
              background-size: cover;
         }
+    }
+
+    .copyright {
+        height: 100px;
+        padding-top: 30px;
+        background-color: @colordark;
+        color: #fff;
     }
 
 
@@ -355,4 +366,15 @@ li.active > a {
             font-size: 34px;
             line-height: 0.7em;
         }   
+    }
+
+    @media (max-width: 768px) {
+
+        .address_support,.address_adress {
+            height: 200px !important;
+        }
+
+        .address .address_image {
+            height: 200px;
+        }
     }
